@@ -15,3 +15,8 @@
     ii) HashSet(int initialCapacity) : user can define their own size, but the default loadFactor remains 0.75
     iii) HashSet(int initialCapacity, float loadFactor)
     iv) HashSet(Collection)
+    
+## Internal working of Set/HashSet in Java
+    we create a HashSet, it internally creates a HashMap and if we insert an element into this HashSet using add() method, 
+    it actually call put() method on internally created HashMap object with element you have specified as it’s key and constant Object called “PRESENT” as it’s value.
+    So we can say that a Set achieves uniqueness internally through HashMap
