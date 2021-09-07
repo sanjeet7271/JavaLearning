@@ -1,4 +1,4 @@
-# Java Set Collection Learning
+# Java HashSet Collection Learning
 ## Basic Characteristics
     - HashSet stores the elements by using a mechanism called hashing.
     - HashSet contains unique elements only.
@@ -20,3 +20,15 @@
     we create a HashSet, it internally creates a HashMap and if we insert an element into this HashSet using add() method, 
     it actually call put() method on internally created HashMap object with element you have specified as it’s key and constant Object called “PRESENT” as it’s value.
     So we can say that a Set achieves uniqueness internally through HashMap
+    
+    
+    
+# Java LinkedHashSet Collection Learning
+## Basic Characteristics
+    -  LinkedHashSet class contains unique elements only like HashSet.
+    -  LinkedHashSet class is non synchronized.
+    -  LinkedHashSet class maintains insertion order
+ 
+## Declaration: 
+        public class LinkedHashSet<E> extends HashSet<E> implements Set<E>, Cloneable, Serializable
+        
