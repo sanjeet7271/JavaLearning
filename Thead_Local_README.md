@@ -5,15 +5,15 @@ read and written by the same thread. Thus, even if two threads are executing the
 threads cannot see each other's ThreadLocal variables
 
 ## Creating a ThreadLocal
-You create a ThreadLocal instance just like you create any other Java object - via the new operator
-    private ThreadLocal thread_local=new ThreadLocal();
-## Set ThreadLocal Value
-Once a ThreadLocal has been created you can set the value to be stored in it using its set() method.
-    thread_local.set("A Local value set");
+You create a ThreadLocal instance just like you create any other Java object - via the new operator<br>
+    private ThreadLocal thread_local=new ThreadLocal();<br>
+## Set ThreadLocal Value <br>
+Once a ThreadLocal has been created you can set the value to be stored in it using its set() method.<br>
+    thread_local.set("A Local value set");<br>
   
-## Get ThreadLocal Value
-You read the value stored in a ThreadLocal using its get() method.
-    String threadlocalValue=(String)thread_local.get();
+## Get ThreadLocal Value <br>
+You read the value stored in a ThreadLocal using its get() method. <br>
+    String threadlocalValue=(String)thread_local.get(); <br>
     
-## Remove ThreadLocal Value
-  thread_local.remove();
+## Remove ThreadLocal Value <br>
+  thread_local.remove(); <br>
