@@ -15,4 +15,6 @@
     1.) Access Modifier of the overriding method (method of subclass) cannot be more restrictive than the overridden method of parent class. For e.g. if the Access Modifier of
         parent class method is public then the overriding method (child class method ) cannot have private, protected and default Access modifier,because all of these three access
         modifiers are more restrictive than public.
+    2.) private, static and final methods cannot be overridden as they are local to the class. However static methods can be re-declared in the sub class,
+        in this case the sub-class method would act differently and will have nothing to do with the same static method of parent class.
 
