@@ -12,4 +12,7 @@
     
  
 ## Overriding
+    1.) Access Modifier of the overriding method (method of subclass) cannot be more restrictive than the overridden method of parent class. For e.g. if the Access Modifier of
+        parent class method is public then the overriding method (child class method ) cannot have private, protected and default Access modifier,because all of these three access
+        modifiers are more restrictive than public.
 
