@@ -51,4 +51,5 @@
 
 ### Static method in Interface
 - The only reason for introducing static methods in an interface is that you call those methods with just the interface name. No need to create a class and its object
+- Static methods are not available to implementing classes
   
