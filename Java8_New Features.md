@@ -30,3 +30,33 @@
                }
      
  - Return Type of predicate is boolean
+ - Predicate Joining: To combine more than one predicate for a single result, we have 3 joins AND, OR,  and NEGATE
+ - Negate work with only one predicate
+
+            package Predict_Interface;
+            import java.util.function.Predicate;
+            public class Predicate_Example3 {
+            	public static void testCondition(Predicate<Integer> predicate, int[] num) {
+            		for(int no:num) {
+            			if(predicate.test(no)) {
+            				System.out.println(no);
+            			}
+            		}
+            	}
+            	public static void main(String[] args) {
+            		
+            		int[] num= {1,2,10,30,20,40,50,25,15};
+            		Predicate<Integer> predicate_1=i->{
+            			return i>10;
+            		};
+            		Predicate<Integer> predicate_2=i->{
+            			return i%2==0;
+            		};
+            		System.out.println("The Number Greater than 10 and even are: ");
+            		testCondition(predicate_1.and(predicate_2),num);
+            	}
+            
+            }
+
+### Function
+   - 
