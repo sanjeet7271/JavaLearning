@@ -74,7 +74,8 @@
             		Function<String,String> function2=str-> str.substring(0,9);
             		System.out.println("The Result Function1 :"+function1.apply("sanjeetkumarpandit"));
             		System.out.println("The Result Function2 :"+function1.apply("sanjeetkumarpandit"));
-            		System.out.println("The Result Function1 andthen function2:"+function1.andThen(function2).apply("sanjeetkumarpandit"));
+            		System.out.println("The Result Function1 andthen function2:"+function1.andThen(function2).apply("sanjeetkumarpandit")); // this is functional chaining
             	}
             }
 
+- Functional Chaining:  Combining 2 function using joining "andThen" and "compose" 
