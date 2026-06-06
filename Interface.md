@@ -23,7 +23,7 @@
                                     } 
                                  <br>
 - Access Modifier Default: In an access modifier, we don't declare the default keyword. The default keyword is only used in an interface to provide an implementation. Default Keyword is also used in a switch case; if no case matches, we print a message to the user.
-- Interface Diamond Problem Solution:
+- Interface Diamond Problem Solution: {interfacename}.super.{methodname}
       package DiamondProblem;
 
                        public interface InterfaceExample1 {
@@ -48,3 +48,7 @@
                      		ep.m1();
                      	}
                      }
+
+### Static method in Interface
+- The only reason for introducing static methods in an interface is that you call those methods with just the interface name. No need to create a class and its object
+  
