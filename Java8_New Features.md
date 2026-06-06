@@ -65,3 +65,16 @@
    - Given some input, perform some operation on the input and then produce/return a result (no necessary a boolean value)
    - It takes one input and returns one output
    - In Function return type is not fixed; hence, we declare both the input type and the return type
+
+            package Function_Iterface;
+            import java.util.function.Function;
+            public class Function_Example3 {
+            	public static void main(String[] args) {
+            		Function<String, String> function1=str-> str.toUpperCase();
+            		Function<String,String> function2=str-> str.substring(0,9);
+            		System.out.println("The Result Function1 :"+function1.apply("sanjeetkumarpandit"));
+            		System.out.println("The Result Function2 :"+function1.apply("sanjeetkumarpandit"));
+            		System.out.println("The Result Function1 andthen function2:"+function1.andThen(function2).apply("sanjeetkumarpandit"));
+            	}
+            }
+
