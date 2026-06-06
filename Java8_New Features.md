@@ -59,4 +59,9 @@
             }
 
 ### Function
-   - 
+   - Predicate is a predefined Functional Interface(Having only 1 abstract method)
+   - The Only abstract method of predicate is apply(T t)
+   - R apply(T t)
+   - Given some input, perform some operation on the input and then produce/return a result (no necessary a boolean value)
+   - It takes one input and returns one output
+   - In Function return type is not fixed; hence, we declare both the input type and the return type
