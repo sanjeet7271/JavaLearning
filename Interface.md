@@ -12,7 +12,7 @@
  - Interface methods cannot have declared abstract methods, as a synchronized concrete class that implements the interface can make methods synchronized.
 
 
-### Interface in Java:
+### Interface in Java8:
  - Interfaces declare a contract of methods (implicitly public abstract) and constants (public static final).
  - Default methods: default methods provide a method body in the interface so you can add behavior without breaking existing implementations. Useful for evolving APIs.
  - Static methods: static methods inside interfaces are utility-like methods callable as InterfaceName.method(...). <br>
