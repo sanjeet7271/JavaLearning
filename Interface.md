@@ -5,7 +5,7 @@
  - An interface always extends another interface.
  - An interface can extend more than one interface.
  - Variables in the interface are public, static, and final by default. Interface variables are also known as constants. Methods in the interface are public and abstract by default.
- - Class always implements an interface.
+ - A class always implements an interface.
  - Interface does not have constructors.
  - Interface doesn’t extend classes.
  - If any new method is added to the interface, then all concrete classes that implement that interface must provide an implementation of the newly added method, because all methods in the interface are abstract by default.
@@ -22,5 +22,29 @@
                                            static String info() { return "Greeter v1"; }
                                     } 
                                  <br>
-- Access Modifier Default: In an access modifier, we don't declare the default keyword. The default keyword is only used in an interface to provide an implementation. Default Keyword is also used in switch case, where no case matches, then we print a message to the user.
+- Access Modifier Default: In an access modifier, we don't declare the default keyword. The default keyword is only used in an interface to provide an implementation. Default Keyword is also used in a switch case; if no case matches, we print a message to the user.
+- Interface Diamond Problem Solution:
+      package DiamondProblem;
 
+                       public interface InterfaceExample1 {
+                       	 default void m1() {
+                       		    System.out.println("Interface Example 1");
+                       	   }
+                       }
+
+                     package DiamondProblem;
+                     public interface InterfaceExample2 {
+                      	default void m1() {
+                      		System.out.println("Interface Example 2");
+                     	}
+                     package DiamondProblem;
+                     public class DaimondProblem implements InterfaceExample1,InterfaceExample2{
+                     	@Override
+                     	public void m1() {
+                     		InterfaceExample1.super.m1(); //if method name is same in both the interface then compiler is confused whom to call, this is daimond problem, and to overcome this problem we need to override method
+                     	}
+                     	public static void main(String[] args) {
+                     		DaimondProblem ep=new DaimondProblem();
+                     		ep.m1();
+                     	}
+                     }
