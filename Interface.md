@@ -15,11 +15,12 @@
 ### Interface in Java:
  - Interfaces declare a contract of methods (implicitly public abstract) and constants (public static final).
  - Default methods: default methods provide a method body in the interface so you can add behavior without breaking existing implementations. Useful for evolving APIs.
- - Static methods: static methods inside interfaces are utility-like methods callable as InterfaceName.method(...).
+ - Static methods: static methods inside interfaces are utility-like methods callable as InterfaceName.method(...). <br>
    Example:
         public interface Greeter {
            default String greet(String name) { return "Hi " + name; }
            static String info() { return "Greeter v1"; }
         }
+   <br>
    - Access Modifier Default: In an access modifier, we don't declare the default keyword. The default keyword is only used in an interface to provide an implementation. Default Keyword is also used in switch case, where no case matches, then we print a message to the user.
 
