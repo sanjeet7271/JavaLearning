@@ -78,4 +78,38 @@
             	}
             }
 
-- Functional Chaining:  Combining 2 function using joining "andThen" and "compose" 
+- Functional Chaining:  Combining 2 functions using "andThen" and "compose"
+
+### Consumer Functional Interface
+- It will consume the item. Consumers never return anything (never supply), they just consume.
+
+               package Consumer_Interface;
+               import java.util.function.Consumer;
+               public class Consumer_Example1 {
+               	public static void main(String[] args) {
+               		Consumer<Employee> eNoConsumer=employee-> System.out.println("Employee Number :"+employee.eno);
+               		
+               		Consumer<Employee> eNameConsumer=employee-> System.out.println("Employee Name :"+employee.ename);
+               		
+               		Consumer<Employee> chainedCustomer=eNoConsumer.andThen(eNameConsumer);
+               		Employee offer=new Employee(1001,"Test");
+               		chainedCustomer.accept(offer);
+               	}
+               }
+
+### Supplier Functional Interface 
+- It will supply required objects and will not take any input
+- it always going to supply never consume/take any input
+- Interface Supplier<R> { public R get() }
+- no Chaining
+
+package Supplier;
+import java.sql.Date;
+import java.util.function.Supplier;
+
+         public class supplierExample {
+         	public static void main(String[] args) {
+         		Supplier<Date> currentDate= ()-> new Date(0);
+         		System.out.println("Supplier :"+currentDate.get());
+         	}
+         }
