@@ -29,3 +29,4 @@
                
                }
      
+ - Return Type of predicate is boolean
