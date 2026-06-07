@@ -31,4 +31,11 @@
  
 ## Declaration: 
         public class LinkedHashSet<E> extends HashSet<E> implements Set<E>, Cloneable, Serializable
-        
+
+
+# Java TreeSet Collection Learning
+## Basic Characteristics
+    - TreeSet is sorted set using Red-Black tree
+    - No Duplicate value is allowed
+    - Element is auto-sorted when element is inserting
+    
