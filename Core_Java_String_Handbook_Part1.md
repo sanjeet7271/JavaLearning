@@ -24,49 +24,138 @@ System.out.println(words.length);
 ## 3. Count Vowels
 
 ``` java
-String s="Automation";
-int count=0;
-for(char c:s.toLowerCase().toCharArray())
-    if("aeiou".indexOf(c)>=0) count++;
-System.out.println(count);
+public class CountVowels {
+
+    public static void main(String[] args) {
+
+        String str = "Automation";
+        int count = 0;
+
+        for (char ch : str.toLowerCase().toCharArray()) {
+
+            if ("aeiou".indexOf(ch) >= 0) {
+                count++;
+            }
+        }
+
+        System.out.println("Number of vowels: " + count);
+    }
+}
 ```
 
 ## 4. Count Duplicate Characters
 
 ``` java
-String s="programming";
-Map<Character,Integer> map=new LinkedHashMap<>();
-for(char c:s.toCharArray()) map.put(c,map.getOrDefault(c,0)+1);
-for(Map.Entry<Character,Integer> e:map.entrySet())
- if(e.getValue()>1) System.out.println(e.getKey()+"="+e.getValue());
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class CountDuplicateCharacters {
+
+    public static void main(String[] args) {
+
+        String str = "programming";
+
+        Map<Character, Integer> map = new LinkedHashMap<>();
+
+        // Count the frequency of each character
+        for (char ch : str.toCharArray()) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+
+        // Print only duplicate characters
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey() + " = " + entry.getValue());
+            }
+        }
+    }
+}
 ```
 
 ## 5. Count Duplicate Words
 
 ``` java
-String s="java java api api api";
-Map<String,Integer> map=new LinkedHashMap<>();
-for(String w:s.split("\\s+"))
- map.put(w,map.getOrDefault(w,0)+1);
-for(Map.Entry<String,Integer> e:map.entrySet())
- if(e.getValue()>1) System.out.println(e);
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class CountDuplicateWords {
+
+    public static void main(String[] args) {
+
+        String str = "java java api api api";
+
+        Map<String, Integer> map = new LinkedHashMap<>();
+
+        // Count the frequency of each word
+        for (String word : str.split("\\s+")) {
+            map.put(word, map.getOrDefault(word, 0) + 1);
+        }
+
+        // Print only duplicate words
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey() + " = " + entry.getValue());
+            }
+        }
+    }
+}
 ```
 
 ## 6. Remove Duplicate Characters
 
 ``` java
-String s="programming";
-StringBuilder sb=new StringBuilder();
-Set<Character> set=new LinkedHashSet<>();
-for(char c:s.toCharArray()) if(set.add(c)) sb.append(c);
-System.out.println(sb);
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class RemoveDuplicateCharacters {
+
+    public static void main(String[] args) {
+
+        String str = "programming";
+
+        StringBuilder result = new StringBuilder();
+
+        Set<Character> set = new LinkedHashSet<>();
+
+        // Remove duplicate characters while maintaining insertion order
+        for (char ch : str.toCharArray()) {
+
+            if (set.add(ch)) {
+                result.append(ch);
+            }
+        }
+
+        System.out.println(result);
+    }
+}
 ```
 
 ## 7. Remove Duplicate Words
 
 ``` java
-String s="java java stream api api";
-Set<String> set=new LinkedHashSet<>();
-for(String w:s.split("\\s+")) set.add(w);
-for(String w:set) System.out.print(w+" ");
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class RemoveDuplicateWords {
+
+    public static void main(String[] args) {
+
+        String s = "java java stream api api";
+
+        Set<String> set = new LinkedHashSet<>();
+
+        // Split the string into words and add them to the LinkedHashSet
+        // LinkedHashSet removes duplicates while maintaining insertion order
+        for (String word : s.split("\\s+")) {
+            set.add(word);
+        }
+
+        // Print unique words in the original order
+        for (String word : set) {
+            System.out.print(word + " ");
+        }
+    }
+}
 ```
