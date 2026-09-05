@@ -8,6 +8,14 @@
    - Streams
    - Parallel Stream
 
+-   Predicate → takes input, returns boolean
+-   Function → takes input, returns output
+-   Consumer → takes input, returns nothing
+-   Supplier → takes nothing, returns output
+-   BiConsumer → takes two inputs, returns nothing
+-   Stream → processes collections of data
+-   Parallel Stream → processes stream elements concurrently
+
 ### Predicate
    - Predicate is a predefined Functional Interface(Having only 1 abstract method)
    - The Only abstract method of predicate is test(T t)
